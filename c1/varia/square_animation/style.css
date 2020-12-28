@@ -1,0 +1,43 @@
+.square {
+    height: 150px;
+    width: 150px;
+    margin: 500px 500px;
+    background-color: darkblue;
+
+    animation-name: square_movement;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    transition-property: background-color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes square_movement {
+    from {
+        transform: translate(0px, 0px);
+        animation-timing-function: linear;
+    }
+    10% {
+        transform: translateX(100px);
+        animation-timing-function: linear;
+    }
+    30% {
+        transform: translateY(100%);
+        animation-timing-function: linear;
+    }
+    50% {
+        transform: scale(2) rotate(145deg);
+        animation-timing-function: linear;
+    }
+    to {
+      transform: rotateX(100deg);
+    }
+
+}
+
+.square:hover {
+    background-color: aqua;
+}

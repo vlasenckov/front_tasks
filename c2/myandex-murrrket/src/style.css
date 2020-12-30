@@ -1,0 +1,293 @@
+/* =============Main document settings==============*/
+html {
+    background-color: white;
+}
+
+body {
+    padding: 0!important;
+    margin: 0!important;
+    box-sizing: content-box;
+}
+
+main {
+    margin-top: 120px;
+    margin-left: 10px;
+}
+
+header {
+    background-color: black;
+    display: block;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 5px 0 red;
+
+    width: 100%;
+    z-index: 3;
+}
+
+h1 {
+    margin: 20px auto;
+
+
+    font-style: normal;
+    font-variant: normal;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+h1:first-letter {
+    color: red;
+}
+
+#plate,
+#list {
+
+}
+
+.cats {
+    height: 80%;
+
+}
+
+/* =============Cat block setup==============*/
+
+h2.cat__title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2.cat__title:first-letter {
+    color: red;
+}
+
+figure.cat__photo {
+    text-align: center;
+}
+
+section.cat__description {
+    display: inline-block;
+    width: 450px;
+    height: 113px;
+    text-align: center;
+}
+
+.cat {
+    box-sizing: content-box;
+    display: inline-block;
+    border: red solid 1px;
+    margin: 70px 50px;
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+
+    vertical-align: bottom;
+
+    background-color: black;
+    color: white;
+
+}
+
+span.description-heading {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* =============View-changer setup==============*/
+#list:checked ~ .cats .cat {
+    position: relative;
+    display: block;
+
+    margin: 70px auto;
+    height: 450px;
+    width: 900px;
+
+}
+
+#list:checked ~ .cats .cat .cat__photo {
+    width: 330px!important;
+    height: 330px!important;
+
+    position: absolute;
+    left: 0px;
+    right: auto;
+    top: 50px;
+
+}
+
+#list:checked ~ .cats .cat .cat__description {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 50px;
+
+}
+
+#list:checked ~ .cats .cat  .figcaption{
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 100px;
+
+
+}
+
+#list:checked ~ .cats .cat .rating {
+    position: absolute;
+    left: auto;
+    right: 100px;
+    bottom: 40px;
+
+    transform: scale(2);
+}
+
+/* =============View-changer button setup==============*/
+
+.controls {
+    display: none;
+    outline: none;
+}
+label {
+    outline-offset: 0.2em;
+}
+
+.visible_list {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/list.png);
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.visible_plate {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/plate.png);
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+
+/* =============Star setup==============*/
+.cat fieldset {
+    box-sizing: content-box;
+    border: 0;
+    width: 140px;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: sans-serif;
+}
+
+
+.rating {
+    margin: 0 0 1em 0;
+    padding: 0;
+    border: none;
+}
+
+.rating__caption {
+    margin-bottom: 0.5em;
+    padding: 0;
+}
+
+.rating__group {
+    position: relative;
+    width: 10em;
+    height: 2em;
+    background-image: url(../img/off.svg);
+    background-size: 2em auto;
+    background-repeat: repeat-x;
+    cursor: pointer;
+}
+
+.rating__group:focus-within {
+    outline: 0.2em solid #4a90e2;
+    outline-offset: 0.2em;
+}
+
+.rating__star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 2em;
+    font-size: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-size: 2em auto;
+    background-repeat: repeat-x;
+}
+
+.rating__star:focus {
+    outline: none;
+}
+
+.rating__star:hover,
+.rating__star:checked {
+    background-image: url(../img/on.svg);
+    cursor: pointer;
+}
+
+.rating__star:hover ~ .rating__star {
+    background-image: url(../img/off.svg);
+}
+
+.rating__star:nth-of-type(1) {
+    z-index: 5;
+    width: 2em;
+}
+
+.rating__star:nth-of-type(2) {
+    z-index: 4;
+    width: 4em;
+}
+
+.rating__star:nth-of-type(3) {
+    z-index: 3;
+    width: 6em;
+}
+
+.rating__star:nth-of-type(4) {
+    z-index: 2;
+    width: 8em;
+}
+
+.rating__star:nth-of-type(5) {
+    z-index: 1;
+    width: 10em;
+}
+
+/* =============Additional effects setup==============*/
+@keyframes ref {
+    to {
+        color: red;
+    }
+}
+
+@keyframes opas {
+    to {
+        opacity: 0.7;
+    }
+}
+
+.cat a:hover {
+    animation: ref;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.cat .cat__photo:hover {
+    animation: opas;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+
+

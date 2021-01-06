@@ -1,6 +1,6 @@
 # front_tasks
-## essentials:
-### HTML + CSS:
+## essentials
+### HTML + CSS
 + [article](c1/varia/index.html)
 + [cartoon](c1/cartoon)
 + [newspaper](c1/newspaper)
